@@ -1,0 +1,153 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.panel{
+    display: none;
+}
+
+.active{
+    display: visible;
+}
+.noactive{
+    display: none;
+}
+
+.detailactive{
+    display: none;
+}
+
+.btnactive{
+    user-select: none;
+    pointer-events: all;
+    cursor: pointer;
+    background-color: rgb(5, 140, 230);
+    opacity: 1;
+}
+
+.card-btnactive{
+    background-color: #64bc6e;
+    border: #64bc6e;
+    color: white;
+}
+
+.card1active{
+    display: none;
+}
+
+.changecardactive{
+    opacity: 1;
+    background-color: rgb(34, 242, 110);
+}
+
+.changecardnoactive{
+    background-color: white;
+}
+
+.card-containeractive{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.carouselactive{
+    border-bottom: 3px solid rgb(0, 179, 255);
+}
+
+.card-containenoractive{
+    display: none;
+}
+
+.otpactive{
+    display: flex;
+}
+
+.timeslotactive{
+    display: none;
+}
+
+.card12active{
+    display: flex;
+}
+
+.carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    user-select: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    height: 60px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 8px;
+    flex-direction: column;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.card-btn{
+    border: 1px solid gray;
+    height: 30px;
+    width: 250px;
+    border-radius: 0.4rem;
+}
+
+/* meadia query */
+
+@media screen and (max-width: 300px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .card-btn{
+        border: 1px solid gray;
+        height: 30px;
+        width: 70px;
+        border-radius: 0.4rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .card-btn{
+        border: 1px solid gray;
+        height: 30px;
+        width: 70px;
+        border-radius: 0.4rem;
+    }
+}

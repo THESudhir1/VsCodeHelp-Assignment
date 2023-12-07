@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK CSS FILE FOR JS FUNCTIONALITY PROPERTIES LIKE ACTIVE CLASSES -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- FONTAWSOME LINK FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- SCRIPT FILE FOR SMTP SERVER FOR OTP INTIGRATION -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>VsCode Help Assignment</title>
+</head>
+<body>
+    <div class="w-[100vw] bg-white h-[100vh] overflow-x-hidden overflow-y-auto">
+        <!-- header section -->
+        <div class="z-10 fixed left-0 right-0 bg-white opacity-100">
+            <div class="w-100vw h-[20px] flex justify-between items-center pl-[40px] pr-[40px] pt-[30px] pb-[30px] shadow-sm shadow-gray-300
+            sm:pl-[60px] sm:pr-[60px]">
+                <!-- logo circle -->
+                <a href="https://drmanikdalvi.getmy.clinic/">
+                    <div class="cursor-pointer w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-red-700 rounded-full flex justify-center items-center">
+                        <p class="text-white font-bold text-base">MD</p>
+                    </div>
+                </a>
+                <!-- help me text -->
+                <a href="#faq">
+                    <div class="text-blue-500 cursor-pointer">Help ?</div>
+                </a>
+            </div>
+        </div>
+        <!-- HERO-SECTION -->
+        <div class="sm:w-full w-[350px] bg-gray-200 z-0 bg-repeat"  >
+            <div class="mx-auto">
+                <div class="w-[1080px] mt-14 mx-auto">
+                    <div class="bg-white pl-[27px] opacity-90">
+                        <!--PROFILE-SECTION  -->
+                        <div class="flex p-[20px] border-b-2">
+                            <!-- img wali div -->
+                            <div>
+                                <img src="./Images/Doctor image.png" alt="" class="profile-image w-[60px] h-[60px] sm:w-28 sm:h-28 rounded-full">
+                            </div>
+                            <!-- name section -->
+                            <div class="flex flex-col items-start ml-[20px] sm:ml-24 sm:mt-1">
+                                <h2 class="font-semibold text-base sm:text-xl">Dr.Manik Dalvi</h2>
+                                <h4 class="opacity-80 font-light text-sm sm:text-base">Obstetrics & Gynecology</h4>
+                                <a href="https://drmanikdalvi.getmy.clinic/">
+                                    <button class="border-blue-500 border p-2 rounded-md text-xs sm:text-sm 
+                                    font-semibold mt-1 text-blue-500 cursor-pointer hover:underline">
+                                        VIEW PROFILE
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- DETAILS-SECTION -->
+                        <div class="flex lg:justify-between sm:justify-normal flex-col sm:flex-row">
+                            <div class="flex p-[20px] flex-col -ml-[30px]">
+                                <h2 class="text-base sm:text-xl font-semibold ">Book Appointment</h2>
+                                <div>
+                                    <h3 class="text-gray-400 text-sm sm:text-base">Select Your Consultation Type</h3>
+                                    <div class="text-green-500 text-xs sm:text-sm">Fees approx ₹ 500</div>
+                                    <div class="text-blue-900 text-xs sm:text-sm">(pay at clinic)</div>
+                                </div>
+                            </div>
+
+                            <!-- CARDS SECTION -->
+                            <div class="sm:p-[17px] p-1">
+                                <div class="flex sm:gap-8 gap-4">
+                                    <!-- changecard CLASS ARE USED TO RENDER THIS BUTTONS TO JS FILE AND CSS FILE FOR ACTIVE PROPERTY AND SOME FUNCTIONALITY-->
+
+                                    <button class="changecard relative cursor-pointer sm:w-[100px] sm:h-[100px] w-20 h-20 -ml-5 sm:ml-0 rounded-md border border-gray-200 bg-green-500">
+                                        <!-- IMAGE OF HOME USED IN CARD -->
+
+                                        <img src="./Images/Home.png" alt="" 
+                                        class="w-[35px] h-[35px] sm:w-10 sm:h-10 -mt-4 mx-auto">
+
+                                        <div class="absolute sm:top-16 sm:left-6 text-black text-sm left-4 top-14">In-Clinic</div>
+                                    </button>
+                                    
+                                    <button class="changecard relative cursor-pointer sm:w-[100px] sm:h-[100px] w-20 h-20 rounded-md border border-gray-200">
+                                        <!-- IMAGE OF PHONE DIALER USED IN CARD -->
+
+                                        <img src="./Images/Phone Dialer.png" alt=""
+                                        class="w-[40px] h-[40px] sm:w-10 sm:h-10 -mt-4 mx-auto">
+
+                                        <div class="absolute sm:top-16 sm:left-6 text-black text-sm left-4 top-14">Audio</div>
+                                    </button>
+                                
+                                    <button class="changecard relative cursor-pointer sm:w-[100px] sm:h-[100px]  w-20 h-20 rounded-md border border-gray-200">
+                                        <!-- IMAGE OF FACE TIME USED IN CARD -->
+
+                                        <img src="./Images/Face time.png" alt=""
+                                        class="w-[40px] h-[40px] sm:w-10 sm:h-10 -mt-4 mx-auto">
+
+                                        <div class="absolute sm:top-16 sm:left-6 text-black text-sm left-4 top-14">Video</div>
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ADDRESS-SECTION -->
+                        <div class="detail flex sm:gap-6 gap-1 flex-col p-[10px]">
+                            <h2 class="sm:text-xl text-sm -ml-[20px] text-black opacity-100 font-semibold">Clinic Name</h2>
+
+                            <a href="body">
+                                <div class="flex items-center gap-1">
+                                    <!-- IMAGE OF CIRCLE USED BEFORE DETAIL -->
+                                    <img src="./Images/Circle image.png" alt="" class="w-[20px] h-[20px] opacity-70 sm:block hidden">
+
+                                    <div class="-ml-3 sm:ml-3">
+                                        <p class="opacity-90 text-xs sm:text-base">
+                                            Manik Dalvi's Clinic, Kalyan Naka, Rk Business 
+                                        </p>
+                                        <p class="opacity-90 text-xs sm:text-base">
+                                            Centre, Opp. Bopal Nagar, Maharashtra, 421302
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- time slot section -->
+                        <div class="timeslot bg-white relative pt-5">
+                            <!-- slider section -->
+                            <div class="slider relative sm:w-full w-[270px] max-w-6xl border-b-2">
+                                <i id="left" class="fa-solid fa-angle-left top-[69%] -left-8 h-12 w-12 
+                                cursor-pointer text-xl absolute text-center leading-8 opacity-50 -translate-y-1/2 
+                                transition-transform duration-200 ease-linear active:-translate-y-1/2 active:scale-[0.85]"></i>
+                                <ul class="carousel">
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Today</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">Sales Manager</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Tomorrow</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">Web Developer</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Thu 07, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">Online Teacher</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Fri 08, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">Freelancer</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Sat 09, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">Bank Manager</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Sun 10, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">App Designer</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Mon 11, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">App Designer</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Tue 12, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">App Designer</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Wed 13, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">App Designer</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Thu 14, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">App Designer</span>
+                                    </li>
+                                    <li class="card">
+                                        <h2 class="font-medium sm:text-base text-xs">Fri 15, Dec</h2>
+                                        <span class="sm:text-base text-xs text-[#6A6D78]">App Designer</span>
+                                    </li>
+                                </ul>
+                                <i id="right" class="fa-solid fa-angle-right top-[69%] -right-3 h-12 w-12 
+                                cursor-pointer text-xl absolute text-center leading-8 opacity-50 -translate-y-1/2 
+                                transition-transform duration-200 ease-linear"></i>
+                            </div>
+
+                            <!-- date section -->
+                            <div class="relative sm:h-[200px] h-[200px]">
+                                <div class="date-container sm:w-full w-[240px]">
+                                    <!-- first card -->
+                                    <div class="card1 justify-center items-center h-[165px] flex">
+                                        <p class="text-xl h-1 opacity-90 -mt-16">No slots available</p>
+                                    </div>
+
+                                    <!-- for rest card -->
+                                    <div class="card-container hidden p-4">
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle text-xs">10:00 AM</button>
+                                        </div>
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle text-xs">10:10 AM</button>
+                                        </div>
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle  text-xs">10:30 AM</button>
+                                        </div>
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle  text-xs">10:45 AM</button>
+                                        </div>
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle  text-xs">11:00 AM</button>
+                                        </div>
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle  text-xs">11:10 AM</button>
+                                        </div>
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle  text-xs">11:30 AM</button>
+                                        </div>
+                                        <div class="card-btn">
+                                            <button class="w-full align-middle text-xs">11:45 AM</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- for button -->
+                                <div>
+                                    <button class="btn absolute text-base text-white 
+                                    text-center justify-center select-none leading-6 
+                                    rounded p-1 bg-gray-500 w-24 h-10 lg:right-[1%] md:right-[50%] sm:right-[70%]
+                                    top-[70%] pointer-events-none cursor-not-allowed opacity-50" id="btn">
+                                        Continue
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- otp CLASS IS USED TO FETCH THIS IN JS FILE APPLY SOME FUNCTIONALITY -->
+                        <div class="otp w-full sm:h-[250px] h-[400px] flex-col  justify-center items-center hidden">
+                            <!--INPUT FIELD FOR EMAIL ID OF USER -->
+                            <div class="w-[500px]">
+                                <label for="email-input" class="mb-4 text-sm font-medium text-white sr-only dark:text-black">Phone number:</label>
+                                <div class="relative sm:w-full w-[200px] flex flex-col sm:flex-row justify-center items-center gap-4">
+                                    <input type="email" id="email-input" class="block mt-16 p-2.5 w-[200px] sm:w-[300px] z-20 text-sm text-gray-400 bg-gray-50 rounded-e-lg
+                                    rounded-s-lg border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 
+                                    dark:border-s-gray-300  dark:border-gray-200 dark:placeholder-gray-400 dark:text-black
+                                    dark:focus:border-blue-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter Your Email Id" required>
+                                    
+                                    <div class="btn-continue sm:mt-16 mt-0 w-24">
+                                        <button onclick="sendOTP()" class="bookbtn border border-gray-400 p-2 rounded-md bg-[#048ce6] text-white" id="btn">
+                                            Get OTP
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="flex items-center gap-1 mt-2 font-sans text-xs sm:text-[12px] ml-[10%] antialiased font-normal leading-normal text-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 -mt-[19px]">
+                                    <path fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 
+                                        12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 
+                                        1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12
+                                        9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                                        clip-rule="evenodd"></path>
+                                    </svg>
+                                    Please enter the Email Id of the patient.<br/> You will receive a confirmation <br/>message on this number.
+                                </p>
+
+                            </div>
+                            
+                            <!-- INPUT FIELD FOR OTP PROVIDE BY USER -->
+                            <div class="w-[500px]">
+                                <label for="otp-input" class="mb-4 text-sm font-medium text-white sr-only dark:text-white">Phone number:</label>
+                                <div class="relative sm:w-full w-[200px] ml-[110px] sm:ml-40">
+                                    <input type="number" id="otp-input" class="default:disabled: block p-3 mt-8 -ml-28 w-[200px] sm:w-[300px] z-20 text-sm text-gray-400 bg-gray-50 rounded-e-lg
+                                    rounded-s-lg border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 
+                                    dark:border-s-gray-300  dark:border-gray-200 dark:placeholder-gray-400 dark:text-black
+                                    dark:focus:border-blue-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter the OTP Sent on your Email Id" required>
+                                </div>
+                            </div>
+                            
+                            <!-- for button -->
+                            <div class="btn-continue mt-4 sm:-ml-36 -ml-10 mb-20">
+                                <button id="bookbtn" class="border border-gray-400 p-2 rounded-md ml-16 bg-[#048ce6] text-white" id="btn">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Frequently asked question -->
+                    <div class="bg-[rgba(221,253,105,0.7)] pl-[27px] h-100vh flex justify-center items-center flex-col sm:w-full w-[350px]" id="faq">
+                        <div class="sm:ml-8 ml-4 sm:flex sm:flex-col sm:justify-center sm:items-center w-[50%]"> 
+                            <h1 class="font-semibold sm:text-3xl text-base pt-[50px] opacity-80 sm:-ml-[20%] -ml-[3%]">Frequently asked questions</h1>
+
+                            <!-- faq -->
+                            <!-- 1st -->
+                            <div class="faq mt-[50px] opacity-90 flex flex-col pb-2">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-sm border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">What are the payment options available?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] w-[250px] -ml-20 p-[10px] rounded-sm border-b-2 sm:text-sm flex items-center text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">E.g, You can pay using a variety of methods such as Internet Banking, Debit/Credit card, Wallet, UPI, and so on.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- 2nd -->
+                            <div class="faq  opacity-90 flex flex-col pb-2">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-sm border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">Do we serve all over India?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] p-[10px] rounded-sm border-b-2 sm:text-sm flex items-center w-[250px] -ml-20 text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">We are currently based in Bhiwandi, however, we offer services nationwide via online consultations.</p>
+                                </div>
+                            </div>
+
+                            <!-- 3rd -->
+                            <div class="faq opacity-90 flex flex-col pb-2">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-sm border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">What are the walk-in options available?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] p-[10px] rounded-sm border-b-2 sm:text-sm flex items-center w-[250px] -ml-20 text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">We offer services at our clinics located at Bhiwandi.</p>
+                                </div>
+                            </div>
+
+                            <!-- 4th -->
+                            <div class="faq  opacity-90 flex flex-col pb-2">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-sm border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">Are online consultations available?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] p-[10px] rounded-sm border-b-2 smtext-sm flex items-center w-[250px] -ml-20 text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">Yes, we offer teleconsultation and onlineservices. Book an appointment at link provided.</p>
+                                </div>
+                            </div>
+
+                            <!-- 5th -->
+                            <div class="faq  opacity-90 flex flex-col pb-2">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-sm border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">How long will my appointment take?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] p-[10px] rounded-sm border-b-2 sm:text-sm flex items-center w-[250px] -ml-20 text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">The length of your appointment is determined by the condition or injuries being treated, as well as whether 
+                                        or not x-rays or an MRI are required. Please allow at least one hour for doctors to provide personalized 
+                                        attention and high-quality care.</p>
+                                </div>
+                            </div>
+
+                            <!-- 6th -->
+                            <div class="faq  opacity-90 flex flex-col pb-2">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-sm border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">Is any referral required for appointments?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] p-[10px] rounded-sm border-b-2 sm:text-sm flex items-center w-[250px] -ml-20 text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">No, we do not require a referral for the appointments.</p>
+                                </div>
+                            </div>
+
+                            <!-- 7th -->
+                            <div class="faq opacity-90 flex flex-col pb-2">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-md border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">How can I book an appointment?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] p-[10px] rounded-md border-b-2 sm:text-sm flex items-center w-[250px] -ml-20 text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">You can click on the book appointment link.</p>
+                                </div>
+                            </div>
+
+                            <!-- 8th -->
+                            <div class="faq opacity-90 flex flex-col pb-24">
+                                <!-- QUESTION -->
+                                <button class="btn-click flex justify-between items-center bg-white h-[50px] sm:w-[700px] w-[250px] -ml-20 p-[20px] rounded-sm border-b-2">
+                                    <p class="opacity-60 sm:text-lg text-sm">Do I need to bring anything at my first appointment?</p>
+                                    <img src="./Images/bi_arrow-down-circle-fill.svg" alt="">
+                                </button>
+                                <!-- ANSWER -->
+                                <div class="panel bg-white sm:w-[700px] p-[10px] rounded-sm border-b-2 sm:text-sm flex items-center w-[250px] -ml-20 text-xs">
+                                    <p class="sm:text-sm text-xs sm:p-2 opacity-80">You may bring the following documents, if available: ID Proof Prior medication list Any prior diagnosis documentation X-RAY reports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LINK JS FILE FOR FUNCTIONALITY ON SITE -->
+    <script src="index.js"></script>
+</body>
+</html>
